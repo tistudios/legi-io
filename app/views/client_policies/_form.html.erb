@@ -1,0 +1,72 @@
+<%= form_with(model: client_policy, local: true) do |form| %>
+  <% if client_policy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client_policy.errors.count, "error") %> prohibited this client_policy from being saved:</h2>
+
+      <ul>
+      <% client_policy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :client_name_id %>
+    <%= form.text_field :client_name_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coverage_type_id %>
+    <%= form.text_field :coverage_type_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :insurer_id %>
+    <%= form.text_field :insurer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loss_runs_reqd %>
+    <%= form.check_box :loss_runs_reqd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :renewal_date %>
+    <%= form.date_select :renewal_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :underwriter_id %>
+    <%= form.text_field :underwriter_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quote_recieved %>
+    <%= form.check_box :quote_recieved %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quote_recieved_date %>
+    <%= form.date_select :quote_recieved_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :did_client_confirmed %>
+    <%= form.check_box :did_client_confirmed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :did_confirm_to_underwriter %>
+    <%= form.check_box :did_confirm_to_underwriter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :did_underwriter_confirm %>
+    <%= form.check_box :did_underwriter_confirm %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

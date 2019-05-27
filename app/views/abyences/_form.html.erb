@@ -1,0 +1,47 @@
+<%= form_with(model: abyence, local: true) do |form| %>
+  <% if abyence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(abyence.errors.count, "error") %> prohibited this abyence from being saved:</h2>
+
+      <ul>
+      <% abyence.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Client_id %>
+    <%= form.text_field :Client_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :insurer_id %>
+    <%= form.text_field :insurer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reminder_date %>
+    <%= form.date_select :reminder_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reminder_content %>
+    <%= form.text_area :reminder_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :renewal_date %>
+    <%= form.date_select :renewal_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :underwriter_id %>
+    <%= form.text_field :underwriter_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

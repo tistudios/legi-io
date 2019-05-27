@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @underwriter.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @underwriter.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @underwriter.email %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @underwriter.company %>
+</p>
+
+<%= link_to 'Edit', edit_underwriter_path(@underwriter) %> |
+<%= link_to 'Back', underwriters_path %>

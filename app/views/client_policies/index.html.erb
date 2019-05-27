@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Client Policies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client name</th>
+      <th>Coverage type</th>
+      <th>Insurer</th>
+      <th>Loss runs reqd</th>
+      <th>Renewal date</th>
+      <th>Underwriter</th>
+      <th>Quote recieved</th>
+      <th>Quote recieved date</th>
+      <th>Did client confirmed</th>
+      <th>Did confirm to underwriter</th>
+      <th>Did underwriter confirm</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @client_policies.each do |client_policy| %>
+      <tr>
+        <td><%= client_policy.client_name %></td>
+        <td><%= client_policy.coverage_type %></td>
+        <td><%= client_policy.insurer %></td>
+        <td><%= client_policy.loss_runs_reqd %></td>
+        <td><%= client_policy.renewal_date %></td>
+        <td><%= client_policy.underwriter %></td>
+        <td><%= client_policy.quote_recieved %></td>
+        <td><%= client_policy.quote_recieved_date %></td>
+        <td><%= client_policy.did_client_confirmed %></td>
+        <td><%= client_policy.did_confirm_to_underwriter %></td>
+        <td><%= client_policy.did_underwriter_confirm %></td>
+        <td><%= link_to 'Show', client_policy %></td>
+        <td><%= link_to 'Edit', edit_client_policy_path(client_policy) %></td>
+        <td><%= link_to 'Destroy', client_policy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client Policy', new_client_policy_path %>

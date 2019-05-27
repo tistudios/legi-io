@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client_name: one
+  coverage_type: one
+  insurer: one
+  loss_runs_reqd: false
+  renewal_date: 2019-05-26
+  underwriter: one
+  quote_recieved: false
+  quote_recieved_date: 2019-05-26
+  did_client_confirmed: false
+  did_confirm_to_underwriter: false
+  did_underwriter_confirm: false
+
+two:
+  client_name: two
+  coverage_type: two
+  insurer: two
+  loss_runs_reqd: false
+  renewal_date: 2019-05-26
+  underwriter: two
+  quote_recieved: false
+  quote_recieved_date: 2019-05-26
+  did_client_confirmed: false
+  did_confirm_to_underwriter: false
+  did_underwriter_confirm: false

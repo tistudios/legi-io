@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Client: one
+  insurer: one
+  reminder_date: 2019-05-26
+  reminder_content: MyText
+  renewal_date: 2019-05-26
+  underwriter: one
+
+two:
+  Client: two
+  insurer: two
+  reminder_date: 2019-05-26
+  reminder_content: MyText
+  renewal_date: 2019-05-26
+  underwriter: two

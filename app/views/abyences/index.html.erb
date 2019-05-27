@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Abyences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Insurer</th>
+      <th>Reminder date</th>
+      <th>Reminder content</th>
+      <th>Renewal date</th>
+      <th>Underwriter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @abyences.each do |abyence| %>
+      <tr>
+        <td><%= abyence.Client %></td>
+        <td><%= abyence.insurer %></td>
+        <td><%= abyence.reminder_date %></td>
+        <td><%= abyence.reminder_content %></td>
+        <td><%= abyence.renewal_date %></td>
+        <td><%= abyence.underwriter %></td>
+        <td><%= link_to 'Show', abyence %></td>
+        <td><%= link_to 'Edit', edit_abyence_path(abyence) %></td>
+        <td><%= link_to 'Destroy', abyence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Abyence', new_abyence_path %>

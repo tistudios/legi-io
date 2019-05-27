@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client name:</strong>
+  <%= @client_policy.client_name %>
+</p>
+
+<p>
+  <strong>Coverage type:</strong>
+  <%= @client_policy.coverage_type %>
+</p>
+
+<p>
+  <strong>Insurer:</strong>
+  <%= @client_policy.insurer %>
+</p>
+
+<p>
+  <strong>Loss runs reqd:</strong>
+  <%= @client_policy.loss_runs_reqd %>
+</p>
+
+<p>
+  <strong>Renewal date:</strong>
+  <%= @client_policy.renewal_date %>
+</p>
+
+<p>
+  <strong>Underwriter:</strong>
+  <%= @client_policy.underwriter %>
+</p>
+
+<p>
+  <strong>Quote recieved:</strong>
+  <%= @client_policy.quote_recieved %>
+</p>
+
+<p>
+  <strong>Quote recieved date:</strong>
+  <%= @client_policy.quote_recieved_date %>
+</p>
+
+<p>
+  <strong>Did client confirmed:</strong>
+  <%= @client_policy.did_client_confirmed %>
+</p>
+
+<p>
+  <strong>Did confirm to underwriter:</strong>
+  <%= @client_policy.did_confirm_to_underwriter %>
+</p>
+
+<p>
+  <strong>Did underwriter confirm:</strong>
+  <%= @client_policy.did_underwriter_confirm %>
+</p>
+
+<%= link_to 'Edit', edit_client_policy_path(@client_policy) %> |
+<%= link_to 'Back', client_policies_path %>
